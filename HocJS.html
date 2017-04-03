@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Học Javascript căn bản</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="JS/demo.js"></script>
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="CSS/DemoJS.css">
+	<script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+	
+</head>
+<body  onload="AddListSong()">
+		
+		
+		<a href="http://www.facebook.com/InnerPeace.Windy"  onclick="return Confirm()">Go To My Facebook!</a>
+		
+		<input type="button" name="OpenNewWindow" value="OpenNewWindow" onclick="OpenNewWindow()">
+
+		<input type="button" value="Click" onclick="prompt('Tên Bạn Là Gì')"/><br><br>
+		<input type="text" name="yourName" id="yourName" />
+	<input type="button" name="Submit" value="GetName" onclick="GetName()"><br><br>
+		
+		Số thứ nhất <input type="text" name="a" id="a" />
+		
+		Số thứ hai <input type="text" name="b" id="b" />
+
+		<input type="button" name="Submit" value="Tính Tổng" onclick="SetResult(TinhTong(GetSo1(),GetSo2()))"><br><br>
+
+		Kết quả <input type="text" id="result" disabled="disabled" />
+
+		<h2>KIỂM TRA SỐ NGUYÊN TỐ</h2>
+		<input type="text" name="inputnumber" id="inputnumber">
+		<input type="button" value="Số Nguyên Tố" onclick="Insonguyento(document.getElementById('inputnumber').value)">
+		<h5 id="TileListSNT"> </h5>
+		
+		<p id="ListSNT"> </p>
+
+		<h2>DANH SÁCH CÁC THÁNG TRONG NĂM</h2>
+
+		<select name="Month" id="ListMonth" onchange="ThangTrongNam()">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>		
+		</select>
+
+		<label for="Month" onmouseover="ChangeColor()" onmouseleave="ChangeColor2()" id="Month">January</label>
+
+		<h2>DANH SÁCH BÀI HÁT</h2>
+
+		<table id="tableSong" cellspacing="2" border="1" cellpadding="2">
+			<thead>
+				<tr>
+					<th>Tên Bài Hát</th>
+					<th>Ca Sĩ</th>
+					<th>Lượt Nghe</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					
+				</tr>
+			</tbody>
+		</table>
+
+
+<hr>
+<br>
+	<div class="FormArea">
+		<div class="container">
+			<div class="row">
+				<form action="" method="POST" role="form">
+					<legend>Form Demo Use Javascript</legend>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group G1">
+						<h2>Thông tin cơ bản</h2>
+
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<label for="">Tên</label>
+							</div>
+
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<label for="">Họ</label>
+							</div>
+
+						</div>
+						
+
+
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<input type="text" class="form-control" id="fieldFirstName" onkeyup="CheckFirstName()" placeholder="Nhập tên">
+							</div>
+							
+							<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+								<input type="text" class="form-control"  id="fieldLastName" onkeyup="CheckLastName()" placeholder="Nhập họ">
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								
+							</div>
+						</div>
+
+						
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<p id="alertErrorFirst"></p>
+							</div>
+							
+							<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+								<p id="alertErrorLast"></p>
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								
+							</div>
+						</div>
+						
+							
+
+								
+					
+						
+						<label for="">Tên Đăng Nhập</label>
+						<div class="row">
+							<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+								<input type="text" class="form-control" id="" placeholder="Tên đăng nhập">
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								
+							</div>
+											
+						</div>
+					
+
+						<label>Mật Khẩu</label>
+						<div class="row">
+							<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+								<input id="Passfield" type="password" class="form-control" onkeyup="CheckPassword()" name="" value="" placeholder="Password">
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+								<img id="imageCheckRight" src="Image/CheckRight.png" style="display: none" height="40" width="40" alt="Image">
+							</div>
+						</div>
+						<p id="InfoPassword"></p>
+
+
+						<label>Nhập Lại Mật Khẩu</label>
+						<div class="row">
+							<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+								<input type="password" id="passRetype" class="form-control" name="" value="" onkeyup="CheckRetypePass()" placeholder="Retype Password">
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+								<img id="imageCheckRight2" src="Image/CheckRight.png" style="display: none" height="40" width="40" alt="Image">
+							</div>
+
+						</div>
+						<label>Email</label>
+						<div class="row">
+							<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+								<input type="Email" id="fieldEmail" class="form-control" onkeyup="CheckEmail()" placeholder="Email" name="" value="" placeholder="Email">
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+								<p id="alertErrorEmail"></p>
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+								
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+					
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group G2">
+						<h2>Thông tin thanh toán</h2>
+						<label for="">Chọn cổng thanh toán</label>
+						<div class="Combox1">
+							<select class="form-control" name="">
+								<option value="PayPal">PayPal</option>
+								<option value="PM">Perfect Money</option>
+								<option value="BTC">Bitcoin</option>
+								
+							</select>
+						</div>
+
+						<label for="">Tài Khoản</label>
+						<input type="text" class="form-control" name="" placeholder="Chi tiết tài khoản">
+						
+						<label for="">Role</label>
+						<div class="radio">
+							<label><input type="radio" name="R1" checked value="">Advertiser</label>
+
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="R1" value="">Publisher</label>
+
+						</div>
+
+					</div>
+				
+				</div>
+					
+					
+					<div class="row text-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="form-group G3">
+								<button type="submit" class="btn btn-primary">Register</button>
+
+							</div>
+						</div>
+						
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	
+	</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">
+		<form action="" method="POST" role="form">
+			Chọn Tháng
+			<select name="" id="inputMonth" class="form-control" onchange ="AddDayOrRemove()"  required="required">
+				<option value="">Chọn Tháng</option>
+				
+				<script type="text/javascript" charset="utf-8" async defer>
+					for(var i=1;i<=12;i++)
+					{
+
+						document.writeln("<option>"+"Tháng "+i+"</option>");
+
+					}
+
+				</script>
+			</select>
+		</div>
+		<div class="col-xs-3">
+			Chọn Ngày
+			<select name="" id="inputDay" class="form-control"  required="required">
+
+			</select>
+		</form>
+		</div>
+
+
+		
+	</div>
+</div>
+
+
+<br><br><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<script type="text/javascript" charset="utf-8">
+				GetInfoBrower();
+
+
+			</script>
+
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+.more {
+  display: none; }
+
+.Lessinfo {
+  display: none; }
+
+.playlist .C1 {
+  border: solid 1px black; }
+  .playlist .C1 .R1 {
+    background: gray; }
+    .playlist .C1 .R1 .R1col1 {
+      padding-top: 7px; }
+    .playlist .C1 .R1 .R1col2 {
+      padding-top: 7px; }
+      .playlist .C1 .R1 .R1col2 marquee {
+        font-size: 20px;
+        color: white;
+        font-weight: bold; }
+  .playlist .C1 .R2 {
+    border-bottom: 1px solid black;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: Arial; }
+    .playlist .C1 .R2 .fa-heart {
+      color: red; }
+    .playlist .C1 .R2 .fa-user {
+      color: blue; }
+  .playlist .C1 .R3 {
+    border-bottom: 1px solid black;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: Arial; }
+    .playlist .C1 .R3 .fa-heart {
+      color: red; }
+    .playlist .C1 .R3 .fa-user {
+      color: blue; }
+  .playlist .C1 .R4 {
+    border-bottom: 1px solid black;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: Arial; }
+    .playlist .C1 .R4 .fa-heart {
+      color: red; }
+    .playlist .C1 .R4 .fa-user {
+      color: blue; }
+
+/*# sourceMappingURL=demoJquey.css.map */

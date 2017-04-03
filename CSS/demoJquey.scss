@@ -1,0 +1,52 @@
+
+@mixin stylerow()
+{
+	border-bottom: 1px solid black;
+			line-height: 50px;
+			font-size: 18px;
+			font-family: Arial;
+			.fa-heart{
+				color: red;
+			}
+			.fa-user{
+				color:blue;
+			}
+
+}
+
+
+.more{
+	display: none;
+}
+.Lessinfo{
+	display: none;
+}
+.playlist{
+	.C1{
+		border:solid 1px black;
+		.R1{
+			background: gray;
+			.R1col1{
+				padding-top: 7px;
+			}
+			.R1col2{
+				padding-top:7px;
+				marquee{
+				font-size: 20px;
+				color: white;
+				font-weight: bold;
+			}
+			
+			}
+		}
+		.R2{
+			@include stylerow;
+		}
+		.R3{
+			@include stylerow;
+		}
+		.R4{
+			@include stylerow;
+		}
+	}
+}
